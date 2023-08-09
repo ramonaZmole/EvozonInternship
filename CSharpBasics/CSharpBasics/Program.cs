@@ -1,4 +1,5 @@
 ﻿
+//Int
 #region declaringVariables
 
 double doubleVariable = 5.6d;
@@ -221,5 +222,70 @@ do
 }
 while (increment < amount);
 
+
+#endregion
+
+
+#region Complex Data Types
+
+//1
+int[] numbers = new int[5];
+
+for (int i = 0; i < 5; i++)
+{
+    Console.Write("Number {0} =  ", i + 1);
+    numbers[i] = Convert.ToInt32(Console.ReadLine());
+}
+
+Console.WriteLine();
+for (int i = 4; i >= 0; i--)
+{
+    Console.Write("{0} ", numbers[i]);
+}
+
+
+
+//2
+int[] arr1 = new int[100];
+int[] arr2 = new int[100];
+int ii, n;
+
+
+Console.Write("\n\nCopy the elements one array into another array :\n");
+Console.Write("----------------------------------------------------\n");
+
+Console.Write("Input the number of elements to be stored in the array :");
+n = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input {0} elements in the array :\n", n);
+for (ii = 0; ii < n; ii++)
+{
+    Console.Write("element - {0} : ", ii);
+    arr1[ii] = Convert.ToInt32(Console.ReadLine());
+}
+/* Copy elements of first array into second array.*/
+for (ii = 0; ii < n; ii++)
+{
+    arr2[ii] = arr1[ii];
+}
+
+/* Prints the elements of first array   */
+Console.Write("\nThe elements stored in the first array are :\n");
+for (ii = 0; ii < n; ii++)
+{
+    Console.Write("{0}  ", arr1[ii]);
+}
+
+/* Prints the elements copied into the second array. */
+Console.Write("\n\nThe elements copied into the second array are :\n");
+for (ii = 0; ii < n; ii++)
+{
+    Console.Write("{0}  ", arr2[ii]);
+}
+Console.Write("\n\n");
+
+
+
+//3
 
 #endregion
